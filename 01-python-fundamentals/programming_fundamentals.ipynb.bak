@@ -1,0 +1,1768 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "e840d38b",
+   "metadata": {},
+   "source": [
+    "Let's start by creating your first Python program. The \"Hello, World!\" program is just one line of code, but it's a powerful introduction to Python's capabilities. Here's what it looks like:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "23d9c9c3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(\"Hello World!\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "43b28d70",
+   "metadata": {},
+   "source": [
+    "## Conditional Statements"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e66eb7d2",
+   "metadata": {},
+   "source": [
+    "Conditional statements are the \"if-then-else\" logic of programming. They empower your code to assess a situation and select a course of action based on whether a condition is true or false. For instance, a weather app could use conditionals to advise \"Wear a jacket!\" if the temperature drops below a certain point, or suggest lighter attire otherwise.\n",
+    "\n",
+    "In Python, the cornerstone of conditional statements is the if statement."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d3445564",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "while True:\n",
+    "    try:\n",
+    "        age = int(input(\"Enter your age: \"))\n",
+    "        if age <= 0:\n",
+    "            print(\"Invalid age. Age must be a positive integer.\")\n",
+    "            continue\n",
+    "        break\n",
+    "    except ValueError:\n",
+    "        print(\"Invalid input. Please enter a valid age.\")\n",
+    "if age < 12:    \n",
+    "    price = 8\n",
+    "elif age < 65:\n",
+    "    price = 12\n",
+    "else:\n",
+    "    price = 10\n",
+    "print(f\"The ticket price is: ${price}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8710dea7",
+   "metadata": {},
+   "source": [
+    "## Loops\n",
+    "### For Loops"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f7678126",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "for i in range(1, 11):\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3815b04d",
+   "metadata": {},
+   "source": [
+    "### While Loops"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a511087e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Example: Keep asking for input until the user enters \"quit\"\n",
+    "user_input = \"\"\n",
+    "while user_input != \"quit\":\n",
+    "    user_input = input(\"Enter something (or 'quit' to exit): \")\n",
+    "    print(\"You entered:\", user_input)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1169837d",
+   "metadata": {},
+   "source": [
+    "n example of a while loop counting down from 10 with an inner if statement."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a78a4959",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = 10\n",
+    "while x > 0: \n",
+    "    print(x)\n",
+    "    x = x - 1\n",
+    "    if x == 5: \n",
+    "        print(\"Halfway point is reached.\") \n",
+    "    else: \n",
+    "        continue "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c17491a6",
+   "metadata": {},
+   "source": [
+    "## Debugging"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6c84210e",
+   "metadata": {},
+   "source": [
+    "The print parentheses statement is your primary tool for tracing. \u200bBy inserting print parentheses statements at strategic locations, you can inspect variables to see how their values change over time. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e6b6b36f",
+   "metadata": {},
+   "source": [
+    "### print() statements: Your Trusty Magnifying Glass"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8987470c",
+   "metadata": {},
+   "source": [
+    "#### Create a function that returns an individual's name formatted as a greeting"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6b10bd03",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def greet(name):\n",
+    "    \"\"\" A greeting message including a person's name \"\"\"\n",
+    "\n",
+    "    # Combine the word \"Hello\" with the person's name and an exclamation point to create the greeting message\n",
+    "    name = \"Hello \" + str(name) + \"!\"\n",
+    "\n",
+    "    # Return the greeting message so it can be used elsewhere in the code\n",
+    "    return name"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "50e775cd",
+   "metadata": {},
+   "source": [
+    "##### Call the greet function with the name \"Alice\" and store the returned greeting message in the variable `result`\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e9ba82c5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Call the greet function, store result in result\n",
+    "result = greet(\"Alice\")\n",
+    "\n",
+    "# Display result\n",
+    "print(result)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6e1e704a",
+   "metadata": {},
+   "source": [
+    "#### Create a function with a function nested inside"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e5325155",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def outer_function(x):\n",
+    "    \"\"\"\n",
+    "    Outer function that takes an integer x, adds 5 to it, and then calls an inner function.\n",
+    "\n",
+    "    Args:\n",
+    "        x (int): The input value that will be used in calculations.\n",
+    "    \"\"\"\n",
+    "    y = x + 5  # Add 5 to x and store it in y\n",
+    "\n",
+    "    def inner_function():\n",
+    "        \"\"\"\n",
+    "        Inner function that multiplies y by 2 and prints the result.\n",
+    "        \"\"\"\n",
+    "        z = y * 2  # Multiply y by 2 and store it in z\n",
+    "        print(\"Inside inner_function, z =\", z)  # Print the value of z\n",
+    "\n",
+    "    inner_function()  # Call the inner_function\n",
+    "    print(\"Inside outer_function, y =\", y)  # Print the value of y after calling inner_function"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cd5337dd",
+   "metadata": {},
+   "source": [
+    "##### Call the outer function"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "97738289",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Call the outer_function with an argument of 10\n",
+    "outer_function(10)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "028a9498",
+   "metadata": {},
+   "source": [
+    "## Common code execution pitfalls: How to avoid them"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "03237482",
+   "metadata": {},
+   "source": [
+    "### Understanding Code Execution"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "48629a23",
+   "metadata": {},
+   "source": [
+    "Before your code ever runs, Python parses and compiles the entire file into bytecode. This is why a syntax error on line 200 will stop your program before line 1 ever executes \u2014 Python already scanned the whole thing and choked on it during this compile pass. So in this narrow sense, the instructor isn't wrong: there IS a full-file pass before execution."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "abe15dbf",
+   "metadata": {},
+   "source": [
+    "Once compiled to bytecode, execution does proceed sequentially, top to bottom, one statement at a time \u2014 with real, immediate effects as it goes. If line 5 throws a runtime error (not a syntax error \u2014 think dividing by zero, or calling an undefined variable), lines 1\u20134 already ran and did whatever they did. Line 6 never runs. That's genuinely sequential, line-by-line behavior, not \"read it all, then run it all.\""
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "da38c052",
+   "metadata": {},
+   "source": [
+    "### 1. Indentation Errors"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3dd49a27",
+   "metadata": {},
+   "source": [
+    "A simple if-else statement where the else block is incorrectly indented:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "44a6fdf5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = 0\n",
+    "\n",
+    "if x > 5:\n",
+    "    print(\"x is greater than 5\")\n",
+    "  else:  # Incorrect indentation\n",
+    "    print(\"x is less than or equal to 5\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "61abf020",
+   "metadata": {},
+   "source": [
+    "### 2. Variable Scope"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f6ff9df4",
+   "metadata": {},
+   "source": [
+    "In Python, variables have a scope, which defines the region of your code where the variable is accessible. A common mistake is trying to access a variable outside its scope."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "99789941",
+   "metadata": {},
+   "source": [
+    "An example in code:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "053edf80",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "flag = False\n",
+    "if flag:\n",
+    "    x = 10\n",
+    "    print(x) # No problem here\n",
+    "\n",
+    "print(x) # No error if flag = True"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0b1cbd1f",
+   "metadata": {},
+   "source": [
+    "**john: So variables out of scope errors are caught during compilation?**\n",
+    "\n",
+    "_Claude: Thought for 6s_\n",
+    "\n",
+    "Good follow-up \u2014 and the answer is a nuanced \"no,\" which trips people up because it seems like it should be a compile-time check.\n",
+    "\n",
+    "Short answer: scope is determined at compile time, but the \"does this variable actually exist\" check happens at runtime.\n",
+    "\n",
+    "Here's the split:\n",
+    "\n",
+    "Compile time: Python's compiler looks at your function and decides, for each name, whether it's local or global/nonlocal \u2014 based on whether you assign to it anywhere in that function. This is static analysis, done before anything runs.\n",
+    "Runtime: Whether that variable actually has a value when a given line executes \u2014 that's only checked when execution reaches that line.\n",
+    "\n",
+    "This produces a classic gotcha:\n",
+    "\n",
+    "```python\n",
+    "def foo():\n",
+    "    print(x)   # NameError/UnboundLocalError happens HERE, at runtime\n",
+    "    x = 5\n",
+    "```\n",
+    "\n",
+    "The compiler sees x = 5 somewhere in foo(), so it decides x is a local variable for the entire function (that decision is compile-time). But when execution actually hits print(x), x hasn't been assigned yet \u2014 so Python throws UnboundLocalError at that moment, not before the function even runs.\n",
+    "\n",
+    "Notice: this code would compile just fine and the interpreter would happily start executing foo(). It only blows up once execution reaches the specific line that references the not-yet-bound variable \u2014 which is a runtime event, tied to the sequential, top-to-bottom execution we just talked about.\n",
+    "\n",
+    "Contrast that with a true compile-time error:\n",
+    "\n",
+    "```python\n",
+    "def foo(:\n",
+    "    print(\"hi\")\n",
+    "```\n",
+    "That's a SyntaxError \u2014 malformed code structure \u2014 and it's caught during the compile pass, before a single line executes, exactly like your instructor's quote described.\n",
+    "\n",
+    "So the rule of thumb: syntax problems (mismatched parens, bad indentation, invalid tokens) \u2192 compile time, whole file, before anything runs. Name/scope/value problems (using an undefined variable, dividing by zero, calling a method that doesn't exist) \u2192 runtime, sequential, only when that line is actually reached.\n",
+    "\n",
+    "**gotcha...does python allow a compile check without running code?**\n",
+    "\n",
+    "_Yes \u2014 a few ways, depending on how deep a check you want:_\n",
+    "\n",
+    "1. py_compile \u2014 compiles without executing\n",
+    "\n",
+    "```bash\n",
+    "python3 -m py_compile your_script.py\n",
+    "```\n",
+    "This runs the full compile pass (syntax check + turns it into bytecode) and reports errors, but never executes a single line. It'll catch things like mismatched parentheses, bad indentation, invalid syntax \u2014 exactly the \"whole file, before anything runs\" category we talked about. It'll silently succeed and produce a .pyc file in a __pycache__ folder if everything's clean.\n",
+    "\n",
+    "2. The compile() built-in, from within Python itself\n",
+    "\n",
+    "```python\n",
+    "with open(\"your_script.py\") as f:\n",
+    "    source = f.read()\n",
+    "compile(source, \"your_script.py\", \"exec\")\n",
+    "```\n",
+    "Same idea \u2014 this raises a SyntaxError if something's malformed, without executing anything. Useful if you want to check code programmatically rather than from the command line.\n",
+    "\n",
+    "3. ``python3 -m py_compile`` vs. just running it \u2014 the key difference\n",
+    "Running python3 your_script.py normally also compiles first, but then immediately executes too. The -m py_compile route stops right after compilation \u2014 it's the cleanest way to isolate \"does this even parse\" from \"does this actually work.\"\n",
+    "\n",
+    "One important caveat, tying back to our UnboundLocalError example:\n",
+    "None of these compile-only checks will catch scope/name errors, undefined variables, type mismatches, or anything that only manifests when code actually runs. A file can compile perfectly clean and still blow up the moment you execute it \u2014 because, as we established, that class of error is a runtime event, not a compile-time one.\n",
+    "\n",
+    "This is also part of why linters (like pylint or flake8) exist \u2014 they go a step further than the compiler by doing static analysis to guess at likely runtime problems (like \"hey, you're using x before you define it\") without actually running your code either. They're not the compiler, but they're trying to catch the gap between \"compiles fine\" and \"actually works.\"\n",
+    "\n",
+    "**Soooo...if the error shows a Traceback (most recent call last) in the error output, that's runtime. Compile errors don't seem to show \"Traceback\"**\n",
+    "\n",
+    "_Exactly right \u2014 that's a genuinely reliable tell, and good pattern-matching on your part._\n",
+    "\n",
+    "Why this makes sense given what we covered:\n",
+    "\n",
+    "A traceback is, by definition, a call stack \u2014 it's showing you the chain of function calls that were in progress when the error hit: \"this line called that function, which called this other function, which is where it blew up.\" That concept only makes sense if code was actually executing \u2014 you can't have a call stack for code that never ran.\n",
+    "\n",
+    "SyntaxError \u2014 no traceback, because nothing was running yet:\n",
+    "\n",
+    "```  File \"script.py\", line 3\n",
+    "    def foo(:\n",
+    "             ^\n",
+    "SyntaxError: invalid syntax\n",
+    "```\n",
+    "Just a file/line pointer and a caret showing where the parser choked. No \"most recent call last,\" because there's no call history \u2014 execution never started.\n",
+    "\n",
+    "Runtime error \u2014 traceback, because something was mid-execution:\n",
+    "\n",
+    "```Traceback (most recent call last):\n",
+    "  File \"script.py\", line 5, in <module>\n",
+    "    foo()\n",
+    "  File \"script.py\", line 2, in foo\n",
+    "    print(x)\n",
+    "NameError: name 'x' is not defined\n",
+    "```\n",
+    "Here you can see the actual chain: the module called foo(), which was executing print(x) when it died. That's a live snapshot of execution in progress \u2014 which only exists because execution was in progress.\n",
+    "\n",
+    "One small wrinkle worth knowing, so this heuristic doesn't fail you later: IndentationError and TabError are technically subclasses of SyntaxError (still compile-time, still no traceback) \u2014 but they can look surprisingly similar to runtime output at a glance since Python's error messages have evolved to be more descriptive. If you ever see one and it's ambiguous, checking for the literal word \"Traceback\" at the top is still your fastest and most reliable signal, exactly like you said.\n",
+    "\n",
+    "**Cool...that helps me understand the mechanics.**\n",
+    "\n",
+    "Glad it clicked. You built a nice little diagnostic toolkit just now: compile vs. runtime, traceback presence as the tell, and py_compile as a way to isolate the two phases yourself instead of just trusting a course quote at face value.\n",
+    "\n",
+    "That instinct to say \"wait, that doesn't match what I think is happening\" and then dig until the model actually holds together \u2014 that's going to serve you well the deeper you get into this. Onward to the next chapter whenever you're ready."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3b42ae76",
+   "metadata": {},
+   "source": [
+    "### 3. Immutable Values"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f321699e",
+   "metadata": {},
+   "source": [
+    " In Python, strings are immutable, meaning their contents cannot be changed after they're created. The code below attempts to change the first character of the string \"Hello\" from 'H' to 'h'. However, this will result in a TypeError because strings are immutable.  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d2afae02",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "value = \"Hello\"\n",
+    "value[0] = 'h'\n",
+    "print(value)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d26ef4d1",
+   "metadata": {},
+   "source": [
+    "### 4. Variable Reassignment"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ecdb327a",
+   "metadata": {},
+   "source": [
+    "you can accidentally use the same variable name again within your code. This can lead to unexpected results, as the later use of the name will change the variable's value. In this example, we first assign the value 5 to the variable x. Then, inside the if statement, we use x again and assign it the value 10. This changes the original value of x. So, when we print x after the if statement, it shows the new value, 10. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c071ca61",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = 5\n",
+    "if True:\n",
+    "   x = 10  # You've used 'x' again here!\n",
+    "   print(x)  # Output: 10\n",
+    "\n",
+    "print(x)  # Output: 10"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bfb9f101",
+   "metadata": {},
+   "source": [
+    "### Overlooking Exceptions"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ac5cfb6b",
+   "metadata": {},
+   "source": [
+    "Exceptions are events that disrupt the normal flow of your code. Failing to handle exceptions can cause your program to crash. These events can be triggered by various factors, such as invalid inputs, attempts to access non-existent files, or even simple mathematical errors like dividing by zero, as shown in the example:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "868446bd",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = 10\n",
+    "y = 0\n",
+    " \n",
+    "result = x / y  # ZeroDivisionError"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cf90c08c",
+   "metadata": {},
+   "source": [
+    "**Solution:**  Exceptions such as ``ZeroDivisionError`` will be covered in more detail at a later point in the course. When a possibility or an exception exists (such as trying to open a missing file, or referencing a variable that doesn't exist), you will use try-except blocks to gracefully handle exceptions, like this code example: "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6156686f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = 10\n",
+    "y = 0\n",
+    "\n",
+    "try:\n",
+    "    result = x / y\n",
+    "except ZeroDivisionError:\n",
+    "    print(\"Error: Division by zero\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c5182e94",
+   "metadata": {},
+   "source": [
+    "**Question 1**\n",
+    "Step 1: Store temperature data\n",
+    "\n",
+    "Instructions:\n",
+    "\n",
+    "You need two lists to store temperature data.\n",
+    "\n",
+    "- The first list, celsius_temperatures, has been created for you.\n",
+    "\n",
+    "- Add the following sample Celsius temperatures to it: 0, 10, 25, 32, 100 to celsius_temperatures.\n",
+    "\n",
+    "- Create the second list, fahrenheit_temperatures, as an empty list to store the converted Fahrenheit temperatures later. It should be an empty list right now.\n",
+    "\n",
+    "- Print both lists to observe their initial state."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6b3dde56",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Create a list and add sample Celsius temperatures to it \n",
+    "celsius_temperatures = [] # Start with an empty list (do not modify)\n",
+    "\n",
+    "# Add the Celsius temperatures to the list\n",
+    "#### Insert code here\n",
+    "for temp in [0, 10, 25, 32, 100]:\n",
+    "        celsius_temperatures.append(temp)   \n",
+    "# Create an empty list to store Fahrenheit temperatures\n",
+    "#### Insert code here\n",
+    "fahrenheit_temperatures = [] # Start with an empty list (do not modify)\n",
+    "# Print both lists (do not modify)\n",
+    "print(\"Celsius Temperatures:\", celsius_temperatures)\n",
+    "print(\"Fahrenheit Temperatures:\", fahrenheit_temperatures) "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fd995603",
+   "metadata": {},
+   "source": [
+    "**Question 2**\n",
+    "Step 2: Convert temperatures\n",
+    "Instructions:\n",
+    "\n",
+    "It's time to convert your Celsius temperatures to Fahrenheit:\n",
+    "\n",
+    "- A for loop to iterate through each celsius value in the celsius_temperatures list has been provided for you. \n",
+    "\n",
+    "- Inside the loop:\n",
+    "\n",
+    "    Apply the Celsius to Fahrenheit conversion formula: F = (C * 9/5) + 32, where F is the Fahrenheit temperature and C is the Celsius temperature. Please use the formula as shown above.\n",
+    "\n",
+    "- The code to store each calculated fahrenheit value in the fahrenheit_temperatures list using the append() method has been provided for you. \n",
+    "\n",
+    "- Print the results."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0079ea5a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Lists from Step 1 (do not modify)\n",
+    "celsius_temperatures = [0, 10, 25, 32, 100]\n",
+    "fahrenheit_temperatures = [] \n",
+    "\n",
+    "# Convert each Celsius temperature to Fahrenheit\n",
+    "for celsius in celsius_temperatures:  # Start the loop (do not modify this line)\n",
+    "  fahrenheit = (celsius * 9/5) + 32\n",
+    "\n",
+    "  fahrenheit_temperatures.append(fahrenheit)  # Append to the list (do not modify this line)\n",
+    "\n",
+    "# Print the results (including the output from Step 1 - do not modify)\n",
+    "print(\"Celsius Temperatures:\", celsius_temperatures)\n",
+    "print(\"Fahrenheit Temperatures:\", fahrenheit_temperatures)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9d6843ae",
+   "metadata": {},
+   "source": [
+    "## Lists"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0ba98b69",
+   "metadata": {},
+   "source": [
+    "Lists are fundamental data structures in Python, serving as versatile containers for storing collections of items. Unlike arrays in some other programming languages that may restrict the type of elements, Python lists offer the flexibility to hold diverse data types, including numbers, strings, booleans, and even other lists. This dynamic nature makes lists an indispensable tool for various programming tasks, from simple data organization to complex algorithm implementation."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "57eede40",
+   "metadata": {},
+   "source": [
+    "### Declaring Lists\n",
+    "\n",
+    "Here are a few cases where you might use lists, and how to declare them:\n",
+    "\n",
+    "Empty list: Your program needs to have a list that will be loaded during program execution. You might get values from the user or from a file and store them during program execution. The list must be initialized first.\n",
+    "\n",
+    "- `new_list = []`\n",
+    "\n",
+    "Prime numbers: Your program needs to keep track of prime numbers. You want to declare this list to hold all prime numbers 13 and under as integers:\n",
+    "\n",
+    "- `primes = [2, 3, 5, 7, 11, 13]`\n",
+    "\n",
+    "Vowels: Your program needs to store vowels for use in a comparison. You want to declare this list to hold all vowels as strings:\n",
+    "\n",
+    "- `vowels = [\"a\", \"e\", \"i\", \"o\", \"u\"]`\n",
+    "\n",
+    "True/false results: Your program needs to store a history of the result of coin flips (True represents heads, False represents tails): \n",
+    "\n",
+    "- `coin_flips = [True, False, True, True, False]`\n",
+    "\n",
+    "Mixed values: Your program needs to store student information in a list. You want to store a student's name (a string), their age (a number), their major (a string), their GPA (a floating-point number), and whether they are a full-time student (a boolean value). Note you will see other, more efficient ways to do this in later readings when you encounter dictionaries.\n",
+    "\n",
+    "- `student_record = [\"Aashvi\", 24, \"Computer Science\", 3.8, True]`"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0dd707c5",
+   "metadata": {},
+   "source": [
+    "### List Comprehensions: A Concise Approach\n",
+    "\n",
+    "A list comprehension is a concise and powerful way in Python to create new lists based on existing iterables (like lists, tuples, strings, ranges, etc.). It provides a more readable and often more efficient alternative to using traditional for loops for creating lists, especially when the logic for creating the new list is relatively straightforward:\n",
+    "\n",
+    "[expression for item in iterable]\n",
+    "\n",
+    "Let's break down each part:\n",
+    "\n",
+    "[ ... ]: The square brackets signify that the result will be a new list.\n",
+    "\n",
+    "expression: This is the operation or transformation that is applied to each item in the iterable. The result of this expression for each item will become an element in the new list.\n",
+    "\n",
+    "for item in iterable: This part specifies the iterable you are working with and assigns each element in the iterable to the variable item during each iteration. It's similar to the beginning of a for loop.  \n",
+    "\n",
+    "Scenario: You have a list of scores for students on an examination, and you'd like to curve the grades by adding 10 points to each score. You will store this in a new list:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d8d19c68",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "exam_scores = [55, 70, 78, 52, 68]\n",
+    "curve_amount = 10\n",
+    "# Use a list comprehension to create a new list of curved grades\n",
+    "curved_grades = [score + curve_amount for score in exam_scores]\n",
+    "print(\"Original scores:\", exam_scores)\n",
+    "print(\"Curved scores:\", curved_grades)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e6798ad5",
+   "metadata": {},
+   "source": [
+    "### List Manipulations \n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "dad14bbd",
+   "metadata": {},
+   "source": [
+    "working with lists to reshape, filter, and pull out exactly \u200bwhat data you need...solve basic \u200bdata cleaning and transformation problems"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "843939cb",
+   "metadata": {},
+   "source": [
+    "#### Filtering\n",
+    "\n",
+    "#### Slices\n",
+    "\n",
+    "#### Built-Ins\n",
+    "- `append()`\n",
+    "  - adds an element to the end of a list\n",
+    "- `insert()`\n",
+    "  - inserts \u200ban element at a specific position within a list\n",
+    "- `pop()`\n",
+    "  - removes and returns the last \u200belement of a list or an element at a specified index\n",
+    "- `remove()`\n",
+    "  - removes the first occurrence \u200bof a specific value from a list\n",
+    "- `sort()`\n",
+    "  - sorts the element of a list in ascending or \u200bdescending order\n",
+    "- `reverse()`\n",
+    "  - reverses the order of elements in a list\n",
+    "- `count()`\n",
+    "  - counts the number of occurrences of a specific value in a list\n",
+    "- `index()`\n",
+    "  - returns the \u200bindex or position of the first occurrence of a specific value in a list"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "da2ca335",
+   "metadata": {},
+   "source": [
+    "## Functions"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c5f25ad3",
+   "metadata": {},
+   "source": [
+    "Functions are reusable blocks of code that perform specific tasks. \u200bThey encapsulate a set of instructions, allowing you to execute those instructions as many \u200btimes as you need to in your program, without having to rewrite the code each time. \u200bConsider them as sort of mini-programs within the larger program. Functions streamline the development process and create code that's \u200brobust, maintainable, and repeatable. \u200bFunctions are important because they bring order, efficiency, and reusability to your \u200bcode, affecting Python programming in four key areas. \u200bCode organization, reusability, abstraction, and collaboration. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c1554cfb",
+   "metadata": {},
+   "source": [
+    "### 3 Different Kinds\n",
+    "#### Built-in Functions\n",
+    "    \u200bThey provide essential functionalities, saving you the trouble of writing code from scratch. \n",
+    "    - print()\n",
+    "    - len()\n",
+    "    - input()\n",
+    "    - int()\n",
+    "    - float()\n",
+    "    - str()\n",
+    "  \n",
+    "#### User Defined Functions\n",
+    "    Functions that you create to perform \u200bspecific tasks in your program.\n",
+    "    \n",
+    "#### Lambda Function\n",
+    "    Anonymous, one-line functions that \u200bare often used for simple operations or as arguments to other functions. \u200bFor example, if you have a list of employees with their salaries, you can use a lambda \u200bfunction to sort the list based on salary in descending order. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5e85c6a4",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def function_name(parameters):\n",
+    "    \"\"\"doc string, which is a string of text that describes what the function does, its parameters, and its return value.\"\"\"\n",
+    "    # Code block contains the code to perform the task.\n",
+    "    return result # Return Statement returns the result of the function to the caller."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7855e3e3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def area_of_rectangle(length, width):\n",
+    "    \"\"\"Calculate the area of a rectangle given its length and width.\"\"\"\n",
+    "    area = length * width\n",
+    "    return area\n",
+    "print(area_of_rectangle(5, 10))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "12a7785d",
+   "metadata": {},
+   "source": [
+    "### The DRY Principle. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b8db0a16",
+   "metadata": {},
+   "source": [
+    "The DRY principle is a fundamental philosophy that underpins efficient coding. It advocates for eliminating redundant code, encouraging you to consolidate repetitive instructions into a single, reusable block. This approach isn't merely about saving keystrokes; it's about reducing the surface area for errors, inconsistencies, and maintenance headaches.\n",
+    "\n",
+    "Let's say you're developing an e-commerce platform. Without DRY, you might find yourself copying and pasting code for tasks like calculating discounts, validating payment information, or sending order confirmation emails. This scattered repetition makes your codebase bloated and prone to errors. If a change is required, you'd have to hunt down and modify every instance of the duplicated code, increasing the risk of introducing bugs.\n",
+    "\n",
+    "DRY, on the other hand, encourages you to create a centralized function for each of these tasks. For example, a ``calculate_discount(price, discount_percentage)`` function would encapsulate the logic for calculating discounts, regardless of the specific product or promotion. This function acts as a single source of truth, ensuring consistency and simplifying updates. \n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e63b288b",
+   "metadata": {},
+   "source": [
+    "### Practice Code"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "16f3dee6",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# \u200bFirst, build a simple calculator using input(), \u200barithmetic operators, and print() to display results.  \n",
+    "\n",
+    "def simple_calculator():\n",
+    "    \"\"\"A simple calculator that performs basic arithmetic operations based on user input.\"\"\"\n",
+    "    \n",
+    "    # Get user input for the first number\n",
+    "    num1 = float(input(\"Enter the first number: \"))\n",
+    "    \n",
+    "    # Get user input for the second number\n",
+    "    num2 = float(input(\"Enter the second number: \"))\n",
+    "    \n",
+    "    # Get user input for the operation to perform\n",
+    "    operation = input(\"Enter an operation (+, -, *, /): \")\n",
+    "    \n",
+    "    # Perform the operation based on user input\n",
+    "    if operation == '+':\n",
+    "        result = num1 + num2\n",
+    "    elif operation == '-':\n",
+    "        result = num1 - num2\n",
+    "    elif operation == '*':\n",
+    "        result = num1 * num2\n",
+    "    elif operation == '/':\n",
+    "        if num2 != 0:\n",
+    "            result = num1 / num2\n",
+    "        else:\n",
+    "            return \"Error: Division by zero is not allowed.\"\n",
+    "    else:\n",
+    "        return \"Error: Invalid operation.\"\n",
+    "    \n",
+    "    # Return the result of the calculation\n",
+    "    return f\"The result of {num1} {operation} {num2} is: {result}\"\n",
+    "\n",
+    "simple_calculator()\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "05bf737f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Then try some data validation, \u200bwrite a program that uses len() \u200band type() to validate user input, \u200band make sure it meets specific criteria \u200b, like password length. \n",
+    "\n",
+    "def validate_password():\n",
+    "    \"\"\"Validate user input for a password based on length and type.\"\"\"\n",
+    "    \n",
+    "    # Get user input for the password\n",
+    "    password = input(\"Enter your password: \")\n",
+    "    \n",
+    "    # Check if the password is a string and meets the length criteria\n",
+    "    if isinstance(password, str) and len(password) >= 8:\n",
+    "        return \"Password is valid.\"\n",
+    "    else:\n",
+    "        return \"Password is invalid. It must be a string with at least 8 characters.\"\n",
+    "\n",
+    "validate_password()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9c1768c2",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def convert_and_operate():\n",
+    "    \"\"\"Convert user input to different data types and perform operations.\"\"\"\n",
+    "    \n",
+    "    # Get user input for an integer\n",
+    "    int_input = input(\"Enter an integer: \")\n",
+    "    try:\n",
+    "        int_value = int(int_input)\n",
+    "        print(f\"Integer value: {int_value}, after adding 10: {int_value + 10}\")\n",
+    "    except ValueError:\n",
+    "        print(\"Invalid integer input.\")\n",
+    "    \n",
+    "    # Get user input for a float\n",
+    "    float_input = input(\"Enter a float: \")\n",
+    "    try:\n",
+    "        float_value = float(float_input)\n",
+    "        print(f\"Float value: {float_value}, after multiplying by 2: {float_value * 2}\")\n",
+    "    except ValueError:\n",
+    "        print(\"Invalid float input.\")\n",
+    "    \n",
+    "    # Get user input for a string\n",
+    "    str_input = input(\"Enter a string: \")\n",
+    "    str_value = str(str_input)\n",
+    "    print(f\"String value: '{str_value}', after concatenation with ' is valid': '{str_value} is valid'\")\n",
+    "\n",
+    "convert_and_operate()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4a8ccae4",
+   "metadata": {},
+   "source": [
+    "### Local Scope"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "44761aed",
+   "metadata": {},
+   "source": [
+    "\n",
+    "Think of local variables as the tools a worker keeps in their own personal toolbox. They're not shared with other workers in different parts of the warehouse. If someone outside the cubicle tries to use one of these tools, they won't find it. Similarly, if you try to access a local variable from outside its function or code block, you'll get a NameError, like a worker searching in vain for a missing wrench.\n",
+    "\n",
+    "This compartmentalization serves several important purposes:\n",
+    "\n",
+    "**Encapsulation**: Local variables keep data and operations neatly contained within their designated workspaces. This makes your code more organized and easier to reason about.\n",
+    "\n",
+    "**Avoiding name collisions**: You can reuse the same variable names (e.g., count, total) in different functions without conflict because their scopes are isolated. It's like having multiple toolboxes with identical labels \u2013 each set of tools is specific to its own workspace."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9ba5d0e6",
+   "metadata": {},
+   "source": [
+    "### Naming Functions & Doc Strings"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5544e05e",
+   "metadata": {},
+   "source": [
+    "Well-designed functions are the foundation of efficient, maintainable, and collaborative software projects. Let\u2019s explore some best practices that will elevate your Python code from functional to exceptional, focusing on naming conventions, docstrings, function length, and avoiding side effects.\n",
+    "Naming conventions: Illuminating the path through your codebase\n",
+    "\n",
+    "Thoughtful naming conventions act as a clear map, guiding you and your fellow developers through your code with confidence. In Python, the recommended convention is snake case for functions. Use lowercase letters with words separated by underscores. This convention aligns with Python's overall aesthetic and enhances readability. Consider the following examples:\n",
+    "\n",
+    "- calculate_discount\n",
+    "\n",
+    "- get_user_data\n",
+    "\n",
+    "- filter_results\n",
+    "\n",
+    "Each name instantly conveys the function's purpose, eliminating the need for guesswork or deciphering cryptic abbreviations.\n",
+    "The art and science of function naming\n",
+    "\n",
+    "- Functions typically perform actions, so starting with a verb like calculate, get, filter, validate, or process sets the right tone.\n",
+    "\n",
+    "- Avoid generic names like get_data. Be specific: get_user_profile_data leaves no room for ambiguity.\n",
+    "\n",
+    "- Maintain a consistent vocabulary throughout your project. If you use client in one function, don't switch to customer or user in another.\n",
+    "\n",
+    "- While short names can be tempting, prioritize clarity. calc_avg might save a few keystrokes, but calculate_average is more informative.\n",
+    "\n",
+    "- Even in concise functions, names like f or x provide no insight into the function's purpose.\n",
+    "\n",
+    "Advanced naming considerations\n",
+    "\n",
+    "If a function is intended for internal use within a module and shouldn't be accessed directly from outside, prefix its name with an underscore (_). For instance, _calculate_internal_metrics. For functions that return a boolean value (True/False), strongly consider using prefixes like is_, has_, or can_ to instantly signal their nature. This significantly enhances code readability, as the function's purpose becomes evident from its name alone. Let\u2019s look at some examples."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "358aaef9",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def is_valid_email(email):\n",
+    "    # ... (Validation logic)\n",
+    "    return True  # Or False based on validation\n",
+    "\n",
+    "def has_sufficient_balance(account):\n",
+    "    # ... (Balance check logic)\n",
+    "    return True  # Or False based on balance\n",
+    "\n",
+    "def can_access_resource(user, resource):\n",
+    "    # ... (Permission check logic)\n",
+    "    return True  # Or False based on permissions"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7409acdb",
+   "metadata": {},
+   "source": [
+    "#### Docstrings: Empowering your code with comprehensive documentation\n",
+    "\n",
+    "Think of docstrings as the instruction manuals for your functions. A docstring should provide essential information about the function's purpose, inputs, outputs, and potential pitfalls. Incorporating type hints into your docstrings enhances their clarity.\n",
+    "The Anatomy of an Exemplary Docstring\n",
+    "Purpose\n",
+    "\n",
+    "A concise description of what the function does and what problem it solves. Avoid technical jargon and aim for clarity.\n",
+    "Arguments\n",
+    "\n",
+    "A detailed list of all input parameters, including:\n",
+    "\n",
+    "    Clear and descriptive names that match the function's internal variables.\n",
+    "\n",
+    "    The expected data types of each argument (int, float, str, list, dict). These are called type hints.\n",
+    "\n",
+    "    Brief explanations of what each argument represents and how it's used.\n",
+    "\n",
+    "    An indication of whether each argument is optional or mandatory. If optional, provide default values.\n",
+    "\n",
+    "##### Return value\n",
+    "\n",
+    "A clear description of the data type and meaning of the value returned by the function. If the function doesn't return anything (None), state it explicitly.\n",
+    "\n",
+    "##### Exception handling\n",
+    "\n",
+    "Strengthen the use of **Raises** in docstrings by specifying exceptions and why they are raised. This empowers users to implement checks to prevent this error or to gracefully handle it if it occurs.\n",
+    "Examples (Optional)\n",
+    "\n",
+    "Include example usage in docstrings for complex functions to show how they should be properly used.\n",
+    "\n",
+    "This code block incorporates all of the concepts behind a well-written docstring, including type hints."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b07f94af",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def calculate_monthly_payment(principal: float, interest_rate: float, loan_term_years: int) -> float:\n",
+    "    \"\"\"\n",
+    "    Calculates the monthly payment for a fixed-rate loan.\n",
+    "\n",
+    "    Args:\n",
+    "        principal: The total amount borrowed (float).\n",
+    "        interest_rate: The annual interest rate (as a decimal, float).\n",
+    "        loan_term_years: The loan term in years (int).\n",
+    "\n",
+    "    Returns:\n",
+    "        The monthly payment amount (float).\n",
+    "\n",
+    "    Raises:\n",
+    "        ValueError: If any of the inputs are negative or zero.\n",
+    "\n",
+    "    Example:\n",
+    "        >>> calculate_monthly_payment(100000, 0.05, 30)\n",
+    "        530.33 \n",
+    "    \"\"\"\n",
+    "    if principal <= 0 or interest_rate <= 0 or loan_term_years <= 0:\n",
+    "        raise ValueError(\"All input values must be positive.\")\n",
+    "\n",
+    "    monthly_interest_rate = interest_rate / 12\n",
+    "    number_of_payments = loan_term_years * 12\n",
+    "    \n",
+    "    # Calculation logic for monthly payment (omitted for brevity)\n",
+    "\n",
+    "    return monthly_payment"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3e6bb160",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\"\"\"\n",
+    "Functional code challenge: Make a sandwich\n",
+    "Task:\n",
+    "\n",
+    "Create a Python function named make_sandwich.\n",
+    "\n",
+    "This function should accept the following parameters:\n",
+    "\n",
+    "bread_type (a string representing the type of bread)\n",
+    "\n",
+    "filling (a string for the main sandwich filling)\n",
+    "\n",
+    "cheese (an optional string for the cheese type, defaulting to \"none\")\n",
+    "\n",
+    "toasted (an optional boolean indicating if the sandwich is toasted, defaulting to False)\n",
+    "\n",
+    "Inside the function, construct a descriptive sentence about the sandwich being made, incorporating all the provided details.\n",
+    "\n",
+    " Have the function return the sentences shown in the Expected Output section below.\n",
+    "\n",
+    "Tips:\n",
+    "\n",
+    "Remember to use default values for the optional parameters.\n",
+    "\n",
+    "Use two if statements to handle the cheese case and the toasted case.\n",
+    "\n",
+    "You can use f-strings for convenient string formatting.\n",
+    "\n",
+    "Ensure you return the string, not print it.\n",
+    "\n",
+    "Example Input:\n",
+    "\n",
+    "make_sandwich(\"wheat\", \"turkey\", \"cheddar\", True)\n",
+    "make_sandwich(\"rye\", \"ham\")\n",
+    "Expected output:\n",
+    "\n",
+    "Making a toasted wheat sandwich with turkey and cheddar cheese.\n",
+    "Making a rye sandwich with ham.\n",
+    "\"\"\"\n",
+    "def make_sandwich(bread_type, filling, cheese=\"none\", toasted=False):\n",
+    "       \"\"\"Constructs a descriptive sentence about the sandwich being made.\n",
+    "    \n",
+    "    Args:\n",
+    "        bread_type (str): The type of bread for the sandwich.\n",
+    "        filling (str): The main sandwich filling.\n",
+    "        cheese (str, optional): The cheese type. Defaults to \"none\".\n",
+    "        toasted (bool, optional): Whether the sandwich is toasted. Defaults to False.\n",
+    "    \n",
+    "    Returns:\n",
+    "        str: A descriptive sentence about the sandwich.\n",
+    "    \"\"\"   \n",
+    "    \n",
+    "    # Start with the base description\n",
+    "    description = \"Making a \"\n",
+    "    \n",
+    "    # Add toasted if applicable\n",
+    "    if toasted:\n",
+    "        description += \"toasted \"\n",
+    "    \n",
+    "    # Add bread type and filling\n",
+    "    description += f\"{bread_type} sandwich with {filling}\"\n",
+    "    \n",
+    "    # Add cheese if it's not \"none\"\n",
+    "    if cheese != \"none\":\n",
+    "        description += f\" and {cheese} cheese\"\n",
+    "    \n",
+    "    # Finish the sentence\n",
+    "    description += \".\"\n",
+    "    \n",
+    "    return description\n",
+    "\n",
+    "print(make_sandwich(\"wheat\", \"turkey\", \"cheddar\", True))\n",
+    "print(make_sandwich(\"rye\", \"ham\"))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "43cb699c",
+   "metadata": {},
+   "source": [
+    "## Building and Using Classes for Object-Oriented Design"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4f5c57bb",
+   "metadata": {},
+   "source": [
+    "a `class` is a blueprint for creating objects that bundle data (attributes) and behavior (methods) together. You define a class using the class keyword followed by the class name and a colon."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3ade1a45",
+   "metadata": {},
+   "source": [
+    "### Objects\n",
+    "\n",
+    "They represent real-world entities or abstract concepts within your code. Each object is like a self-contained unit with its own data and the ability to perform actions.\n",
+    "### Classes\n",
+    "\n",
+    "They serve as blueprints or templates for creating objects. Classes define the common characteristics (attributes) and behaviors (methods) that all objects of that class share. \n",
+    "### Encapsulation\n",
+    "\n",
+    "This means keeping the details of how an object works hidden inside the object, so you can change those details without breaking the rest of your program. It bundles data and the actions that operate on that data within a class, protecting the internal state of an object. \n",
+    "### Abstraction\n",
+    "\n",
+    "This simplifies complex systems by focusing on essential features and interactions, hiding unnecessary details. It focuses on what an object does rather than how it does it, so your code is easier to understand and use.\n",
+    "### Inheritance\n",
+    "\n",
+    "This lets you create new kinds of objects that are based on existing ones, inheriting their features and adding new ones. This promotes code reuse and models hierarchical relationships. \n",
+    "### Polymorphism\n",
+    "\n",
+    "This means you can treat different kinds of objects in a similar way, as long as they share a common interface. This provides flexibility and adaptability in your code. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "84805f24",
+   "metadata": {},
+   "source": [
+    "### Code organization\n",
+    "\n",
+    "Classes create a clear structure for your code. Instead of scattering variables and functions throughout your script, you can group them together within a class, making your code easier to read, understand, and maintain.\n",
+    "\n",
+    "For example, imagine you're building a game with multiple characters. Each character might have attributes like name, health, strength, and speed. Without classes, you might end up with a mess of variables like character1_name, character2_health, and so on. With a Character class, you can neatly encapsulate all these attributes within a single object.\n",
+    "### Reusability\n",
+    "\n",
+    "Once you've defined a class, you can create multiple instances (objects) of that class. This means you don't have to rewrite the same code repeatedly. You can simply create a new object and customize it with specific attributes.\n",
+    "\n",
+    "Let's say you have a BankAccount class. You can create objects for different accounts (my_account, your_account, etc.), each with its own balance and transaction history. The underlying logic for depositing and withdrawing money is encapsulated within the class, so you don't have to repeat it for each account.\n",
+    "### Encapsulation\n",
+    "\n",
+    "Encapsulation in Python is achieved primarily through a convention rather than strict enforcement. It revolves around using a single underscore (_) prefix for attribute names to signal that they are intended for internal use within the class. While Python doesn't prevent direct access to these \"private\" attributes from outside the class, the underscore serves as a clear indication to other developers that these attributes should be treated as part of the class's internal implementation and not modified directly."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6c9540ad",
+   "metadata": {},
+   "source": [
+    "Functional code challenge: A dog can bark!\n",
+    "Your task:\n",
+    "\n",
+    "    Create a Python class named Dog.\n",
+    "\n",
+    "    Define two attributes within the Dog class: name (a string to store the dog's name) and breed (a string to store the dog's breed).\n",
+    "\n",
+    "    Implement a method named bark() within the Dog class. This method should print a message to the console that includes the dog's name and breed: \n",
+    "    Woof! My name is name and I'm a breed.\n",
+    "    Verify the period appears at the end of the printout.\n",
+    "\n",
+    "    (provided) Create an instance (object) of the Dog class, name it my_dog. As this is not part of the Dog class, it will not be indented. \n",
+    "\n",
+    "    (provided) Using the my_dog variable instance. call the bark() method, providing the name Buddy and the breed Golden Retriever to see it in action!\n",
+    "\n",
+    "Tips:\n",
+    "\n",
+    "    Remember to use the __init__ method to initialize the name and breed attributes when creating a new Dog object.\n",
+    "\n",
+    "    Within the bark() method, use self.name and self.breed to access the dog's attributes as part of your print statement. But remember, they are already assigned \n",
+    "\n",
+    "Example input (provided):\n",
+    "\n",
+    "my_dog = Dog(\"Buddy\", \"Golden Retriever\")\n",
+    "\n",
+    "my_dog.bark()\n",
+    "Expected output:\n",
+    "\n",
+    "Woof! My name is Buddy and I'm a Golden Retriever."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "77d5a186",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class Dog:\n",
+    "    \"\"\"A simple Dog class to demonstrate object-oriented programming in Python.\"\"\"\n",
+    "    \n",
+    "    def __init__(self, name, breed):\n",
+    "        \"\"\"Initialize the Dog object with a name and breed.\"\"\"\n",
+    "        self.name = name\n",
+    "        self.breed = breed\n",
+    "    \n",
+    "    def bark(self):\n",
+    "        \"\"\"Simulate the dog barking.\"\"\"\n",
+    "        return f\"Woof! My name is {self.name} and I'm a {self.breed}.\"\n",
+    "    \n",
+    "my_dog = Dog(\"Buddy\", \"Golden Retriever\")\n",
+    "\n",
+    "print(my_dog.bark())  # Call the bark method to see the dog's bark message"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7ae9fdfc",
+   "metadata": {},
+   "source": [
+    "## Data Structures"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "da467839",
+   "metadata": {},
+   "source": [
+    "### Lists\n",
+    "Ordered, mutable, duplicates allowed, Indexable.\n",
+    "Lists are incredibly adaptable. You can picture them as a row of boxes, each holding a single item. The order of the items matter \u2013 the first box holds the first item, the second box the second, and so on. What makes lists so useful is that you have a whole set of tools to manipulate them:\n",
+    "\n",
+    "- Adding and removing: Need to add another item to your shopping list? No problem, just use the .append() method to tack it onto the end. Forgot something? .remove() it or .pop() it off the list.\n",
+    "\n",
+    "- Slicing and replacing: Want just the first three items? Slice the list like this: my_list[:3]. Need to change the middle items? Slice and replace: my_list[2:5] = [new_item1, new_item2].\n",
+    "\n",
+    "- Sorting and searching: Lists have built-in methods to sort themselves (my_list.sort()) and to find the index of a specific item (my_list.index(item)).\n",
+    "\n",
+    "- Flexible data types: Lists can hold values of any data type, even lists or dictionaries. This allows for complex and nested data structures.\n",
+    "\n",
+    "`append(item)`: Adds the item to the end of the list, like adding a new task to the bottom of your to-do list.\n",
+    "\n",
+    "`insert(index, item)`: Inserts the item at the specified index, shifting existing items to the right. This is like squeezing in a new task between existing ones.\n",
+    "\n",
+    "`pop()`: Removes and returns the last item in the list, similar to crossing off the final task on your list.\n",
+    "\n",
+    "`remove(item)`: Searches for the first occurrence of the item and removes it. If you decide to skip a particular task, you can remove it.\n",
+    "\n",
+    "`del` statement: Deletes objects, variables, or specific elements within mutable data structures like lists and dictionaries."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d0bf5bee",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "my_list = [1, 2.1, \"hello\", [3, 4]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c9b47adf",
+   "metadata": {},
+   "source": [
+    "### Dictionaries\n",
+    "Key-Value pairs, unordered, mutable, keys must be unique.\n",
+    "While lists are great for ordered sequences, dictionaries are great for organization. Imagine a dictionary as a set of labeled boxes. Each box has a unique label (the key) and holds its own item (the value). This makes them perfect for situations where you need to look up information quickly based on a specific identifier.\n",
+    "\n",
+    "- Adding and updating: In your shopping list app, each item could be a key in a dictionary, and the quantity of that item would be the value. When the user adds an item, you'd create a new key-value pair. If they change the quantity, you simply update the value associated with that item's key.\n",
+    "\n",
+    "- Flexible data types: Like lists, dictionaries can hold values of any data type."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "368f2d67",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "my_dict = {\"name\": \"Alice\", \"age\": 30, \"city\": \"New York\"}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "33cde9f8",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "shopping_list = [\"apples\", \"bananas\", \"milk\"]  # List for items\n",
+    "item_quantities = {\"apples\": 3, \"bananas\": 1}  # Dictionary for quantities\n",
+    "\n",
+    "# User adds an item\n",
+    "shopping_list.append(\"eggs\")\n",
+    "item_quantities[\"eggs\"] = 12 \n",
+    "\n",
+    "# User increases the quantity of bananas\n",
+    "item_quantities[\"bananas\"] += 2\n",
+    "\n",
+    "# User removes apples\n",
+    "shopping_list.remove(\"apples\")\n",
+    "del item_quantities[\"apples\"]\n",
+    "\n",
+    "# Print updated list and dictionary\n",
+    "print(shopping_list)\n",
+    "print(item_quantities)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "56e29008",
+   "metadata": {},
+   "source": [
+    "### Sets\n",
+    "Unordered, mutable, no dupllicates, fast membership testing.\n",
+    "Think of sets as a bag of marbles, each one distinct and unique. The order doesn't matter here, but the fact that there are no duplicates is crucial.\n",
+    "\n",
+    "- Trying to add the same item twice to a set won't do anything; it will only be stored once.\n",
+    "\n",
+    "- Need to remove duplicates from a list? Convert it into a set, and Python will automatically take care of it. Sets are also great for checking membership \u2013 asking, \"Is this item in my collection?\"\n",
+    "\n",
+    "- Sets are mutable by default - items can be added and removed - but there is a special type of set called frozenset that is immutable. If you haven't intentionally selected a frozenset you are dealing with a normal, mutable set.\n",
+    "\n",
+    "`add(item)`: Adds the item to the set only if it's not already present.\n",
+    "\n",
+    "`remove(item)`: Removes the item from the set if it exists.\n",
+    "\n",
+    "`union(other_set)`: Combines two sets to create a new set containing all unique elements from both.\n",
+    "\n",
+    "`intersection(other_set)`: Creates a new set containing only the elements that are common to both sets.\n",
+    "\n",
+    "`difference(other_set)`: Creates a new set containing elements that are in the first set but not in the second.\n",
+    "\n",
+    "`issubset(other_set)`: Checks if all elements of the first set are also in the second set.\n",
+    "\n",
+    "`issuperset(other_set)`: Checks if all elements of the second set are also in the first set."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "08acef4e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Create a set of favorite programming languages\n",
+    "languages = {\"Python\", \"JavaScript\", \"Java\"}\n",
+    "# Add \"C++\" to the set\n",
+    "languages.add(\"C++\")\n",
+    "# Try to add \"Python\" again (it won't be added because it's a duplicate)\n",
+    "languages.add(\"Python\")\n",
+    "print(languages)  # Output: {'Python', 'C++', 'JavaScript', 'Java'} (order may vary)\n",
+    "# Remove \"Java\"\n",
+    "languages.remove(\"Java\")\n",
+    "# Create another set of languages\n",
+    "web_languages = {\"JavaScript\", \"HTML\", \"CSS\"}\n",
+    "# Find common languages between the two sets\n",
+    "common_languages = languages.intersection(web_languages)\n",
+    "print(common_languages)  # Output: {'JavaScript'}"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d2b80a40",
+   "metadata": {},
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "id": "992594f3",
+   "metadata": {},
+   "source": [
+    "### Tuples\n",
+    "Ordered, immutable, duplicates allowed.\n",
+    "In contrast to lists and dictionaries, tuples are immutable. Once you create a tuple, its contents are fixed and cannot be altered. This means:\n",
+    "\n",
+    "- You can't append, insert, remove, or change elements within a tuple after it's created. It's a snapshot in time.\n",
+    "\n",
+    "- Tuples are your go-to choice when you have data that must remain constant throughout your program's execution. Coordinates, dates, and configuration settings are common examples where tuples shine. They offer a guarantee that these values won't be accidentally modified, adding a layer of safety to your code.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b0fdc51c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "my_tuple = (10, 20, \"python\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f1f92412",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Tuples\n",
+    "coordinates = (37.7749, -122.4194)  # Latitude, longitude of San Francisco\n",
+    "birth_date = (1990, 12, 25)       # Year, month, day\n",
+    "\n",
+    "# Sets\n",
+    "unique_colors = {\"red\", \"green\", \"blue\"}\n",
+    "numbers = [1, 2, 2, 3, 4, 4, 5]\n",
+    "unique_numbers = set(numbers)    # Removes duplicates"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2bc0cdab",
+   "metadata": {},
+   "source": [
+    "### Coding challenge: Create a Python dictionary\n",
+    "**Your Task:**\n",
+    "\n",
+    "Create a Python dictionary to represent a simple product catalog. The dictionary should contain three products, with each product's SKU (Stock Keeping Unit) serving as the key. Include the following information as values for each product:\n",
+    "\n",
+    "- name: The name of the product.\n",
+    "\n",
+    "- price: The price of the product.\n",
+    "\n",
+    "- quantity: The number of items in stock.\n",
+    "\n",
+    "Here are the (3) products:\n",
+    "\n",
+    "SKU123\n",
+    "name: Widget A\n",
+    "price: 19.99\n",
+    "quantity: 50\n",
+    "\n",
+    "SKU456\n",
+    "name: Gadget B\n",
+    "price: 34.95\n",
+    "quantity: 25\n",
+    "\n",
+    "SKU789\n",
+    "name: Gizmo C\n",
+    "price: 9.99\n",
+    "quantity: 100\n",
+    "\n",
+    "Once you've created the dictionary, write code to retrieve and print the price of a specific product using its SKU.\n",
+    "Tips:\n",
+    "\n",
+    "- Remember that dictionary keys must be unique.\n",
+    "\n",
+    "- Use descriptive variable names to make your code more readable.\n",
+    "\n",
+    "- You can access values in a dictionary using square brackets and the key.\n",
+    "\n",
+    "- You have been provided with the variable sku_to_find - you should use this as part of your if statement.\n",
+    "\n",
+    "- Be mindful of mixing single and double quotes when working with dictionaries and f-strings. In Python, both single (') and double (\") quotes can be used to define strings, including dictionary keys. In all environments, this code will work:\n",
+    "    `print(f\"The price of {product_catalog[sku_to_find]['name']} is ${price}\")`\n",
+    "    but using all double quotes will not in most environments (basically, any environment aside from Juypter):\n",
+    "    `print(f\"The price of {product_catalog[sku_to_find][\"name\"]} is ${price}\")`\n",
+    "\n",
+    "Example Input:\n",
+    "\n",
+    "    SKU to retrieve: \"SKU123\"\n",
+    "\n",
+    "Expected Output:\n",
+    "\n",
+    "    The price of Widget A is $19.99\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "2f00ead5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The price of Widget A is $19.99\n"
+     ]
+    }
+   ],
+   "source": [
+    "product_catalog = {\n",
+    "    'SKU123': {\n",
+    "        'name': 'Widget A', \n",
+    "        'price': 19.99,\n",
+    "        'quantity': 50\n",
+    "    },\n",
+    "    'SKU456': {\n",
+    "        'name': 'Gadget B',\n",
+    "        'price': 34.95,\n",
+    "        'quantity': 25\n",
+    "    },\n",
+    "    'SKU789': {\n",
+    "        'name': 'Gizmo C',\n",
+    "        'price': 9.99,\n",
+    "        'quantity': 100\n",
+    "    } \n",
+    "}\n",
+    "\n",
+    "# The SKU we're looking for\n",
+    "sku_to_find = 'SKU123'\n",
+    "\n",
+    "# Check if the SKU exists in our catalog\n",
+    "if sku_to_find in product_catalog:\n",
+    "    price = product_catalog[sku_to_find]['price']\n",
+    "    name = product_catalog[sku_to_find]['name']\n",
+    "    print(f\"The price of {name} is ${price}\")\n",
+    "else:\n",
+    "    print(f\"SKU {sku_to_find} not found in catalog\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9e1c1dbd",
+   "metadata": {},
+   "source": [
+    "Before you practice, remember:\n",
+    "\n",
+    "    dict basics: A Python dict stores data as key: value pairs; each key is unique and used for fast lookup of its associated value.\n",
+    "    key: value access pattern: You retrieve a value with my_dict[key]; keys must be hashable (e.g., str, int, tuple), values can be any type.\n",
+    "    Nested dictionaries: You can store dictionaries inside dictionaries to model hierarchical data, e.g. students[\"alice\"][\"grade\"].\n",
+    "    Iterating dictionaries:\n",
+    "        Over keys: for k in my_dict:\n",
+    "        Over values: for v in my_dict.values():\n",
+    "        Over key\u2013value pairs: for k, v in my_dict.items():\n",
+    "    dict.get() for safe access:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5efb1ab3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "value = my_dict.get(\"missing_key\", default_value)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b288520a",
+   "metadata": {},
+   "source": [
+    "This avoids KeyError and returns None or the provided default if the key is absent."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3e80fe55",
+   "metadata": {},
+   "source": [
+    "## Sets\n",
+    "A set is an unordered collection of unique elements, great for removing duplicates and fast membership tests:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "815d3f2e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "s = {1, 2, 3}\n",
+    "2 in s  # True"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2cf5b020",
+   "metadata": {},
+   "source": [
+    "a | b      # union: elements in a or b\n",
+    "a & b      # intersection: elements in both\n",
+    "a - b      # difference: in a but not in b\n",
+    "a ^ b      # symmetric difference: in a or b but not both"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cdaa0164",
+   "metadata": {},
+   "source": [
+    "## Data Manipulation"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "65ec2c72",
+   "metadata": {},
+   "source": [
+    "### pandas\n",
+    "Gives us the DataFrame. Similar to a spreadsheet, but more versatile."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ba55383c",
+   "metadata": {},
+   "source": [
+    "### NumPy\n",
+    "High performance arrays."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "abf18282",
+   "metadata": {},
+   "source": [
+    "### Matplotlib\n",
+    "A plotting library. Data visualization."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "venv (3.14.6)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.14.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
